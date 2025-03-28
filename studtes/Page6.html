@@ -1,0 +1,33 @@
+{{ block title }}
+    Тест для студентов (страница 3/6)
+{{ endblock }}
+{{ block content }}
+<br>
+<p>13. Перед Вами Утёнок, который живет на ферме.Вчера Утёнок ходил в гости к своему другу Цыплёнку, а завтра пойдет в гости к другу Гусёнку. Выберите букву"Ц" в поле, которое соответствует прошлому из этих двух событий, и букву "Г" в поле, которое соответствует будущему событию для утёнка </p>
+<div style="text-align: center; margin-bottom: 30px;">
+    <img src="{{ static 'studtes/duck.jpg' }}"/>
+</div>
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+    <div style="border: 2px solid #ddd; padding: 20px; border-radius: 10px;">
+        <h5>Верхнее поле</h5>
+        {% formfield player.q55_1 %}
+    </div>
+
+    <div style="border: 2px solid #ddd; padding: 20px; border-radius: 10px;">
+        <h5>Нижнее поле</h5>
+        {% formfield player.q55_2 %}
+    </div>
+</div>
+
+{% next_button %}
+
+<style>
+    .form-control {
+        width: 100%;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+{{ endblock }}

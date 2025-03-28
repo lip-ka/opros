@@ -1,0 +1,100 @@
+{{ block title }}
+    Тест для студентов (страница 2/6)
+{{ endblock }}
+{{ block content }}
+
+{{ formfield 'q9' }}
+
+
+<style>
+        .mgslider-wrapper {
+            border-spacing: 10px;
+        }
+        .mgslider-show {
+            text-align: center;
+        }
+        .mgslider-limit {
+            width: 10%;
+            min-width: 75px;
+            height: 40px;
+            margin: 100px;
+            text-align: center;
+            background: #eee;
+            border: 1px solid #888;
+        }
+        .mgslider-limit, .mgslider-value {
+            font-variant-numeric: tabular-nums;
+        }
+        .mgslider-before {
+            height: 16px;
+            width: 100%;
+            background: #1e5bff;
+        }
+        .mgslider-feedback {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+
+
+
+
+
+{{ formfield 'q12' }}
+
+{{ formfield 'q14' }}
+<br>
+<p>9. Как Вы оцениваете свой уровень интереса к финансовым тематикам? </p>
+<p> Оцените Ваше мнение по шкале от 1 до 10, где 1 – «Стараюсь избегать финансовых новостей» (низкий), а 10 – «Слежу за финансовыми новостями, читаю книги, слушаю лекции» (высокий).</p>
+{{ formfield_errors 'q15' }}
+    <div id="slider7_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider7 = new mgslider("q15", 1, 10, 1);
+            slider7.recall = true; // Optional line to remember value across errors
+            slider7.print(document.getElementById("slider7_here"));
+        });
+    </script>
+<br>
+<p>10.В целом, насколько Вы удовлетворены своей жизнью? </p>
+<p> Оцените Ваше мнение по шкале от 1 до 10, где 1– «Совершенно не удовлетворен(-a)», а 10 «Полностью удовлетворен(-a)» </p>
+{{ formfield_errors 'q16' }}
+    <div id="slider8_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider8 = new mgslider("q16", 1, 10, 1);
+            slider8.recall = true; // Optional line to remember value across errors
+            slider8.print(document.getElementById("slider8_here"));
+        });
+    </script>
+<br>
+<p>11. В общем, Вы считаете, что большинству людей можно доверять, или при общении с другими людьми всегда стоит проявлять осторожность? </p>
+<p>Оцените Ваше мнение по шкале, где 1– «Нужно быть максимально осторожным в доверии другим людям", а 10– «Большинству людей можно полностью доверять»</p>
+{{ formfield_errors 'q17' }}
+    <div id="slider9_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider9 = new mgslider("q17", 1, 10, 1);
+            slider9.recall = true; // Optional line to remember value across errors
+            slider9.print(document.getElementById("slider9_here"));
+        });
+    </script>
+<br>
+<p>12. Некоторые люди верят, что они имеют полную свободу выбора и полный контроль над своей жизнью, в то время как другие люди верят, что их действия не имеют реального влияния на то, что происходит с ними.</p>
+<p>Оцените Ваше мнение по шкале от 1 до 10, где 1– «У меня нет свободы выбора», а 10– «У меня полная свобода выбора». </p>
+{{ formfield_errors 'q18' }}
+    <div id="slider10_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider10 = new mgslider("q18", 1, 10, 1);
+            slider10.recall = true; // Optional line to remember value across errors
+            slider10.print(document.getElementById("slider10_here"));
+        });
+    </script>
+    {{ next_button }}
+{{ endblock }}

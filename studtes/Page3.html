@@ -1,0 +1,58 @@
+{{ block title }}
+    Тест для студентов (страница 5/6)
+{{ endblock }}
+{{ block content }}
+{{ formfield 'q19'}}
+{{ formfield 'q20' }}
+{{ formfield 'q21' }}
+{{ formfield 'q22' }}
+{{ formfield 'q23' }}
+{{ formfield 'q24' }}
+{{ formfield 'q25' }}
+{{ formfield 'q26' }}
+<style>
+    .mgslider-wrapper {
+        border-spacing: 10px;
+    }
+    .mgslider-show {
+        text-align: center;
+    }
+    .mgslider-limit {
+        width: 10%;
+        min-width: 75px;
+        height: 40px;
+        margin: 100px;
+        text-align: center;
+        background: #eee;
+        border: 1px solid #888;
+    }
+    .mgslider-limit, .mgslider-value {
+        font-variant-numeric: tabular-nums;
+    }
+    .mgslider-before {
+        height: 16px;
+        width: 100%;
+        background: #1e5bff;
+    }
+    .mgslider-feedback {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
+
+<br>
+<p>32. Оцените свой уровень финансовой грамотности </p>
+<p>Оцените свой уровень финансовой грамотности по шкале от 1 до 10, где 1– «У меня очень низкий уровень финансовой грамотности», а 10– «У меня очень высокий уровень финансовой грамотности» </p>
+{{ formfield_errors 'q27' }}
+    <div id="slider27_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider27 = new mgslider("q27", 1, 10, 1);
+            slider27.recall = true; // Optional line to remember value across errors
+            slider27.print(document.getElementById("slider27_here"));
+        });
+    </script>
+    {{ next_button }}
+{{ endblock }}
