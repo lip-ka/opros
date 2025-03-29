@@ -1,0 +1,28 @@
+name: Remote SSH
+on:
+  push:
+    branches:
+    - main
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@main
+      with:
+        host: ${{ secrets.IP }}
+        username: ${{ secrets.USER }}
+        password: ${{ secrets.PRIVATE_KEY }}
+        script: |
+          screen -S experiment -X quit
+          screen -dmS experiment
+          screen -S experiment -X stuff "source venv/bin/activate\n"
+          screen -S experiment -X stuff "cd opros\n"
+          screen -S experiment -X stuff "git pull\n"
+          screen -S experiment -X stuff "export OTREE_PRODUCTION=1\n"
+          screen -S experiment -X stuff "export OTREE_AUTH_LEVEL=STUDY\n"
+          screen -S experiment -X stuff "export OTREE_ADMIN_PASSWORD=${{ secrets.OTREE_ADMIN_PASSWORD }}\n"
+          screen -S experiment -X stuff "export DATABASE_URL=${{ secrets.OTREE_DB }}\n"
+          screen -S experiment -X stuff "otree prodserver 8000\n"
