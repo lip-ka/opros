@@ -1,0 +1,105 @@
+{{ block title }}
+    Опрос (страница 4/6)
+{{ endblock }}
+{{ block content }}
+<style>
+    .mgslider-wrapper {
+        border-spacing: 10px;
+    }
+    .mgslider-show {
+        text-align: center;
+    }
+    .mgslider-limit {
+        width: 10%;
+        min-width: 75px;
+        height: 40px;
+        margin: 100px;
+        text-align: center;
+        background: #eee;
+        border: 1px solid #888;
+    }
+    .mgslider-limit, .mgslider-value {
+        font-variant-numeric: tabular-nums;
+    }
+    .mgslider-before {
+        height: 16px;
+        width: 100%;
+        background: #1e5bff;
+    }
+    .mgslider-feedback {
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+</style>
+
+
+<br>
+<p>14. Представьте свой день выхода на пенсию. Насколько далек или близок этот день к сегодняшнему моменту? Отметьте на шкале, где левый край шкалы означает «очень близко», правый– «очень далеко»</p>
+{{ formfield_errors 'q39' }}
+    <div id="slider39_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider39 = new mgslider("q39", 1, 18, 1);
+            slider39.recall = true; // Optional line to remember value across errors
+            slider39.print(document.getElementById("slider39_here"));
+        });
+    </script>
+
+
+<br>
+<p>15. Представьте день, который наступит 10 октября 2049. Близок он или далек для Вас? Отметьте этот день на представленной шкале. </p>
+{{ formfield_errors 'q44' }}
+    <div id="slider44_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider44 = new mgslider("q44", 1, 25, 1);
+            slider44.recall = true; // Optional line to remember value across errors
+            slider44.print(document.getElementById("slider44_here"));
+        });
+    </script>
+
+<br>
+<p>16. Представьте день, который наступит 10 октября 2049. Уверены ли вы в том, что если вы будете ежемесячно откладывать часть своего дохода, то 10 октября 2039 года сможете ими воспользоваться? </p>
+{{ formfield_errors 'q45' }}
+    <div id="slider45_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider45 = new mgslider("q45", 1, 25, 1);
+            slider45.recall = true; // Optional line to remember value across errors
+            slider45.print(document.getElementById("slider45_here"));
+        });
+    </script>
+
+<br>
+<p>17. Представьте день, который наступит 10 октября 2049. Уверены ли вы в том, что если вы будете ежемесячно откладывать часть своего дохода, то на этот день у вас будет достаточно средств для поддержания такого же уровня жизни, как сейчас, до конца вашей жизни? </p>
+{{ formfield_errors 'q46' }}
+    <div id="slider46_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider46 = new mgslider("q46", 1, 25, 1);
+            slider46.recall = true; // Optional line to remember value across errors
+            slider46.print(document.getElementById("slider46_here"));
+        });
+    </script>
+
+<br>
+<p>18. Отметьте на шкале самую отдаленную точку, которую Вы считаете надежной с точки зрения возможности воспользоваться своими сбережениями.</p>
+{{ formfield_errors 'q47' }}
+    <div id="slider47_here"></div>
+    <script src="{{ static 'mgslider.js' }}"></script>
+    <script>
+        $(document).ready(function (event) {
+            slider47 = new mgslider("q47", 1, 25, 1);
+            slider47.recall = true; // Optional line to remember value across errors
+            slider47.print(document.getElementById("slider47_here"));
+        });
+    </script>
+
+    {{ next_button }}
+
+{{ endblock }}
