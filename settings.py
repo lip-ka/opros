@@ -15,8 +15,7 @@ SESSION_CONFIGS = [
 ROOMS = [
     dict(
         name = 'main_test',
-        display_name = 'Future perception',
-        use_secure_urls = False  # (опционально) если хотите добавить дополнительную безопасность
+        display_name = 'Future perception'
     ),
 ]
 
