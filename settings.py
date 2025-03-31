@@ -18,13 +18,13 @@ ROOMS = [
     dict(
         name = 'main_test',
         display_name = 'Future perception',
-        use_secure_urls = True  # (опционально) если хотите добавить дополнительную безопасность
+        use_secure_urls = False  # (опционально) если хотите добавить дополнительную безопасность
     ),
 ]
 
 DATABASES = {
     'default': dj_database_url.config(
-        default = os.environ.get('DATABASE_URL')
+        default='postgres://experiment:here_password_of_the_database@localhost/djangodb'
     )
 }
 
