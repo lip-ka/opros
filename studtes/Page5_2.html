@@ -41,49 +41,60 @@
     <script src="{{ static 'mgslider.js' }}"></script>
     <script>
         $(document).ready(function (event) {
-            slider39 = new mgslider("q39", 1, 18, 1);
-            slider39.recall = true; // Optional line to remember value across errors
-            slider39.print(document.getElementById("slider39_here"));
-        });
+        slider39 = new mgslider("q39", 1, 10, 1);
+        slider39.recall = true;
+        slider39.print(document.getElementById("slider39_here"));
+        // Изменяем подписи после инициализации
+        $('#slider39_here .mgslider-limit:first').text('Очень близко');
+        $('#slider39_here .mgslider-limit:last').text('Очень Далеко');
+    });
     </script>
 
 
 <br>
-<p>15. Представьте день, который наступит 10 октября 2049. Близок он или далек для Вас? Отметьте этот день на представленной шкале. </p>
+<p>15. Представьте день, который наступит 10 апреля 2049. Близок он или далек для Вас? Отметьте этот день на представленной шкале. </p>
 {{ formfield_errors 'q44' }}
     <div id="slider44_here"></div>
     <script src="{{ static 'mgslider.js' }}"></script>
     <script>
         $(document).ready(function (event) {
-            slider44 = new mgslider("q44", 1, 25, 1);
-            slider44.recall = true; // Optional line to remember value across errors
-            slider44.print(document.getElementById("slider44_here"));
+        slider44 = new mgslider("q44", 1, 10, 1);
+        slider44.recall = true;
+        slider44.print(document.getElementById("slider44_here"));
+        // Изменяем подписи после инициализации
+        $('#slider44_here .mgslider-limit:first').text('Очень близко');
+        $('#slider44_here .mgslider-limit:last').text('Очень Далеко');
         });
     </script>
 
 <br>
-<p>16. Представьте день, который наступит 10 октября 2049. Уверены ли вы в том, что если вы будете ежемесячно откладывать часть своего дохода, то 10 октября 2039 года сможете ими воспользоваться? </p>
+<p>16. Представьте день, который наступит 10 апреля 2049. Уверены ли вы в том, что если вы будете ежемесячно откладывать часть своего дохода, то 10 апреля 2049 года сможете ими воспользоваться? </p>
 {{ formfield_errors 'q45' }}
     <div id="slider45_here"></div>
     <script src="{{ static 'mgslider.js' }}"></script>
     <script>
         $(document).ready(function (event) {
-            slider45 = new mgslider("q45", 1, 25, 1);
-            slider45.recall = true; // Optional line to remember value across errors
-            slider45.print(document.getElementById("slider45_here"));
+        slider45 = new mgslider("q45", 1, 10, 1);
+        slider45.recall = true; // Optional line to remember value across errors
+        slider45.print(document.getElementById("slider45_here"));
+        // Изменяем подписи после инициализации
+        $('#slider45_here .mgslider-limit:first').text('асболютно не уверен');
+        $('#slider45_here .mgslider-limit:last').text('асболютно уверен');
         });
     </script>
 
 <br>
-<p>17. Представьте день, который наступит 10 октября 2049. Уверены ли вы в том, что если вы будете ежемесячно откладывать часть своего дохода, то на этот день у вас будет достаточно средств для поддержания такого же уровня жизни, как сейчас, до конца вашей жизни? </p>
+<p>17. Представьте день, который наступит 10 апреля 2049. Уверены ли вы в том, что если вы будете ежемесячно откладывать часть своего дохода, то на этот день у вас будет достаточно средств для поддержания такого же уровня жизни, как сейчас, до конца вашей жизни? </p>
 {{ formfield_errors 'q46' }}
     <div id="slider46_here"></div>
     <script src="{{ static 'mgslider.js' }}"></script>
     <script>
         $(document).ready(function (event) {
-            slider46 = new mgslider("q46", 1, 25, 1);
-            slider46.recall = true; // Optional line to remember value across errors
-            slider46.print(document.getElementById("slider46_here"));
+        slider46 = new mgslider("q46", 1, 10, 1);
+        slider46.recall = true; // Optional line to remember value across errors
+        slider46.print(document.getElementById("slider46_here"));
+        $('#slider46_here .mgslider-limit:first').text('асболютно не уверен');
+        $('#slider46_here .mgslider-limit:last').text('асболютно уверен');
         });
     </script>
 
@@ -94,9 +105,11 @@
     <script src="{{ static 'mgslider.js' }}"></script>
     <script>
         $(document).ready(function (event) {
-            slider47 = new mgslider("q47", 1, 25, 1);
-            slider47.recall = true; // Optional line to remember value across errors
-            slider47.print(document.getElementById("slider47_here"));
+        slider47 = new mgslider("q47", 1, 10, 1);
+        slider47.recall = true; // Optional line to remember value across errors
+        slider47.print(document.getElementById("slider47_here"));
+        $('#slider47_here .mgslider-limit:first').text('1 год');
+        $('#slider47_here .mgslider-limit:last').text('25 лет');
         });
     </script>
 

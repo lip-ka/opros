@@ -1,13 +1,30 @@
 from os import environ
+import dj_database_url
+import os
 
 SESSION_CONFIGS = [
     dict(
-        name='studtes',
-        display_name ="The test of future perception",
-        app_sequence=['studtes'],
-        num_demo_participants=25,
+        name = 'studtes',
+        display_name = "The test of future perception",
+        app_sequence = ['studtes'],
+        num_demo_participants = 25,
     ),
 ]
+
+ROOMS = [
+    dict(
+        name = 'main_test',
+        display_name = 'Future perception',
+        use_secure_urls = True  # (опционально) если хотите добавить дополнительную безопасность
+    ),
+]
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default = os.environ.get('DATABASE_URL')
+    )
+}
+
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
 # in SESSION_CONFIGS, except those that explicitly override it.
@@ -15,7 +32,7 @@ SESSION_CONFIGS = [
 # e.g. self.session.config['participation_fee']
 
 SESSION_CONFIG_DEFAULTS = dict(
-    real_world_currency_per_point=1.00, participation_fee=0.00, doc=""
+    real_world_currency_per_point = 1.00, participation_fee = 0.00, doc = ""
 )
 
 PARTICIPANT_FIELDS = []

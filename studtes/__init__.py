@@ -52,12 +52,12 @@ class Player(BasePlayer):
                             choices= ["Я их принимаю и адаптируюсь",
                                       "Я предпочитаю стабильность, но могу адаптироваться",
                                       "Я испытываю трудности с изменениями",
-                                      "Я испытываю трудности с изменениями"],
+                                      "я избегаю изменений"],
                             widget=widgets.RadioSelect)
 
 
     q12 = models.StringField(
-        label="7. Согласны ли Вы, что увеличить доход практически невозможно?",
+        label="7. Согласны ли Вы с утверждением, что значительно увеличить свой доход в современных условиях практически невозможно?",
         choices=["Да", "Нет"],
         widget=widgets.RadioSelect)
 
@@ -237,6 +237,8 @@ def set_payoffs(group):
 
 
 #  PAGES
+class Page1(Page):
+    form_model = 'player'
 class MyPage(Page):
     form_model = 'player'
     form_fields = ['gender', 'age',  'q','educ_par', 'q4']
@@ -305,8 +307,9 @@ class Results(Page):
 
 
 page_sequence = [
-    MyPage,    # сначала сбор familyname
-    Page2,     # затем другие страницы
+    Page1,
+    MyPage,
+    Page2,
     Page6,
     Page5_2,   # страницы с условиями
     Page5_1,
