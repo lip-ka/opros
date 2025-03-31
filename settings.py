@@ -21,7 +21,7 @@ ROOMS = [
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://experiment:here_password_of_the_database@localhost/djangodb'
+        default = "postgres://experiment:'PASSWORD HERE FOR DATABASE, PLEASE SAVE IT'@localhost/djangodb"
     )
 }
 
