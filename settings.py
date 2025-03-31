@@ -1,5 +1,3 @@
-pip install dj-database-url
-
 from os import environ
 import dj_database_url
 import os
