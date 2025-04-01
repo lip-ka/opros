@@ -14,14 +14,14 @@ SESSION_CONFIGS = [
 
 ROOMS = [
     dict(
-        name = 'main_test',
+        name = 'main__test',
         display_name = 'Future perception'
     ),
 ]
 
 DATABASES = {
     'default': dj_database_url.config(
-        default = "postgres://experiment:'PASSWORD HERE FOR DATABASE, PLEASE SAVE IT'@localhost/djangodb"
+        default = "postgres://experiment:'gfhjkm_gegjr'@localhost/djangodb"
     )
 }
 
