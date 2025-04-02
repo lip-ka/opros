@@ -307,7 +307,6 @@ class Results(Page):
 
 
 page_sequence = [
-    Page1,
     MyPage,
     Page2,
     Page6,
